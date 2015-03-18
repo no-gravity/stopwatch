@@ -131,7 +131,8 @@ function reset()
 {
  stopTime=Date.now();
  startTime=Date.now();
- if (modus=="stopped") modus="new";
+ if (modus=="running") clearInterval(interval);
+ modus="new";
  redisplay();
 }
 
