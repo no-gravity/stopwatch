@@ -112,11 +112,11 @@ modus="new";
 function start()
 {
  if (modus=="running") return;
- interval=setInterval(step,1000);
+ interval=setInterval(redisplay,1000);
  if (modus=="new") startTime=Date.now();
  else              startTime+=(Date.now()-stopTime);
  modus="running";
- step();
+ redisplay();
 }
 
 function stop()
@@ -132,12 +132,12 @@ function reset()
  stopTime=Date.now();
  startTime=Date.now();
  if (modus=="stopped") modus="new";
- step();
+ redisplay();
 }
 
-function step()
+function redisplay()
 {
- nowTime=Math.round((Date.now()-startTime)/1000);
+ var nowTime=Math.round((Date.now()-startTime)/1000);
 
  var h=Math.floor(nowTime/(60*60));
  nowTime-=h*60*60;
