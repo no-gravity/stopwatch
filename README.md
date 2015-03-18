@@ -1,2 +1,2 @@
 # stopwatch
-A minimalistic stopwatch. See it life at http://www.yeahit.com/stopwatch
+A minimalistic stopwatch. See it live at http://www.yeahit.com/stopwatch.
