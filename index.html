@@ -8,7 +8,6 @@ License: GPL 2.0 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 -->
 
-
 <html>
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -115,11 +114,11 @@ modus="new";
 function start()
 {
  if (modus=="running") return;
- interval=setInterval(redisplay,1000);
+ interval=setInterval(displayTime,1000);
  if (modus=="new") startTime=Date.now();
  else              startTime+=(Date.now()-stopTime);
  modus="running";
- redisplay();
+ displayTime();
 }
 
 function stop()
@@ -136,10 +135,10 @@ function reset()
  startTime=Date.now();
  if (modus=="running") clearInterval(interval);
  modus="new";
- redisplay();
+ displayTime();
 }
 
-function redisplay()
+function displayTime()
 {
  var nowTime=Math.round((Date.now()-startTime)/1000);
 
@@ -163,7 +162,6 @@ function redisplay()
 }
 
 </script>
-
 
 </body>
 </html>
