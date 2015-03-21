@@ -123,7 +123,8 @@ function start()
 
 function stop()
 {
- if (modus=="new") return;
+ if (modus=="stopped") return;
+ if (modus=="new")     return;
  stopTime=Date.now();
  modus="stopped";
  clearInterval(interval);
