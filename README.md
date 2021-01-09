@@ -1,2 +1,4 @@
 # stopwatch
-A minimalistic stopwatch. See it live at http://www.yeahit.com/stopwatch.
+A minimalistic stopwatch.
+
+Demo: https://www.gibney.de/yeah_it_s_a_stopwatch
